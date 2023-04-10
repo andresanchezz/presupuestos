@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.presupuestos{
+    width: 25%;
+}
+
+.presupuesto-datos{
+    margin-top: 4px;
+    padding: 10px;
+    height: 45px;
+}
+
+h6{
+    font-size: 28px;
+}
+
+h5{
+    font-size: 32px;
+}
+
+.ingreso-datos{
+    
+    border: 1px solid rgba(129, 129, 129, 0.116);
+
+    input, select{
+        padding: 4px;
+        margin: 0 5px;
+        border: none;
+    }
+    input[type="submit"]{
+        padding: 4px 18px;
+    }
+    
+}
+
+
+@media (max-width: 768px){
+    .presupuestos{
+        width: 50%;
+    }
+    .ingreso-datos{
+        input, select{
+           display: block;
+           margin: 10px 0;
+        }
+    }
+}
+
+@media (max-width: 556px){
+    .presupuestos{
+        width: 75%;
+    }
+}

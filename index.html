@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Presupuesto</title>
+</head>
+
+<body>
+
+    <div class="mt-4 text-center flex-wrap">
+        <p class="display-6">Presupuesto disponible</p>
+        <h5 class="text-primary" id="presupuesto-disponible"></h5>
+    </div>
+
+    <div class="d-flex  justify-content-center mb-3 text-white">
+        <div class="presupuestos">
+
+            <div class="d-flex justify-content-between  bg-success presupuesto-datos" >
+                <p class="n-entradas">INGRESO</p>
+                <p id="ingreso-total"></p>
+            </div>
+    
+            <div class="d-flex justify-content-between bg-danger presupuesto-datos">
+                <p class="n-entradas">EGRESO</p>
+                <span id="porcentaje-egreso">%</span>
+                <p class="d-flex" id="egreso-total"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ingreso-datos d-flex justify-content-center bg-light p-4 flex-wrap">
+        <form id="form-data">
+            <select name="tipoIngreso" id="">
+                <option value="+">+</option>
+                <option value="-">-</option>
+            </select>
+            
+            <input type="text" name="descripcion" placeholder="Descripcion" required>
+            <input type="number" name="valor" placeholder="Valor" required>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <div class="presupuestos-tablas container mt-5">
+
+        <div class="row d-flex">
+            <div class="col-md-6 col-sm-12">
+                <h6 class="text-success">Ingresos</h6>
+                <div id="ingresos">
+
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+            <h6 class="text-danger">Egresos</h6>  
+            <div id="egresos">
+                
+            </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="main.js" type="module"></script>
+
+
+</body>
+
+</html>
